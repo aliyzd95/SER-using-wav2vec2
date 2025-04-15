@@ -6,7 +6,7 @@ This project focuses on **emotion recognition in Persian speech** using the powe
 
 We use the **`m3hrdadfi/wav2vec2-large-xlsr-persian-v3`** pretrained model for speech representation learning. The model is fine-tuned on a custom enhanced dataset called **Modified ShEMO**, which is an improved version of the original ShEMO dataset for Persian emotional speech.
 
-📄 An academic paper introducing Modified ShEMO has been written, which also includes performance comparisons of various models trained on this dataset.
+📄 An academic [paper](https://arxiv.org/abs/2211.09956) introducing Modified ShEMO has been written, which also includes performance comparisons of various models trained on this dataset.
 
 ## 📊 Results Comparison from the Paper
 
