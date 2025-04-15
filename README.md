@@ -29,15 +29,6 @@ This project achieves a **WA (Weighted Accuracy)** of `0.8401`, which surpasses 
 | Early-Fusion Model (DNN)         | emo_large + fastText (ASR transcriptions) | 80.51 | 69.73 |
 | **Wav2Vec2 (This project)**      | Raw Audio                                    | **84.01**  |   -   |
 
-
-Also, a comparison of SVM performance before and after dataset modification:
-
-| Machine Learning Model | Dataset           | WA%   | UA%   |
-|------------------------|--------------------|-------|-------|
-| SVM (After Modification) | Modified ShEMO     | 76.65 | 63.62 |
-| SVM (Before Modification)| Original ShEMO     | 72.95 | 58.66 |
-| SVM (ShEMO Paper)   | Original ShEMO          | 58.02 |   -   |
-
 ## 🚀 Project Results
 
 In this project, the fine-tuned Wav2Vec2 model achieved a weighted accuracy of:
@@ -63,6 +54,14 @@ We used the **[Modified ShEMO](https://github.com/aliyzd95/modified_shemo)** dat
 - Improved audio quality
 - Corrected labels
 - Preprocessing suitable for deep learning models
+
+Also, a comparison of SVM performance before and after dataset modification:
+
+| Machine Learning Model | Dataset           | WA%   | UA%   |
+|------------------------|--------------------|-------|-------|
+| SVM (After Modification) | Modified ShEMO     | 76.65 | 63.62 |
+| SVM (Before Modification)| Original ShEMO     | 72.95 | 58.66 |
+| SVM (ShEMO Paper)   | Original ShEMO          | 58.02 |   -   |
 
 ## 📈 Error Analysis
 
