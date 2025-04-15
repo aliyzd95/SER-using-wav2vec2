@@ -15,6 +15,30 @@ The model is trained and evaluated on the **Modified ShEMO** dataset, an improve
 The trained model is available on Hugging Face:  
 👉 [aliyzd95/wav2vec2-xlsr-shemo-speech-emotion-recognition](https://huggingface.co/aliyzd95/wav2vec2-xlsr-shemo-speech-emotion-recognition)
 
+## 📦 Dataset
+
+We used the **[Modified ShEMO](https://github.com/aliyzd95/modified_shemo)** dataset, an improved version of the original ShEMO dataset. Enhancements include:
+
+- Improved audio quality
+- Corrected labels
+- Preprocessing suitable for deep learning models
+
+Also, a comparison of SVM performance before and after dataset modification:
+
+| Machine Learning Model | Dataset           | WA%   | UA%   |
+|------------------------|--------------------|-------|-------|
+| SVM (After Modification) | Modified ShEMO     | 76.65 | 63.62 |
+| SVM (Before Modification)| Original ShEMO     | 72.95 | 58.66 |
+| SVM (ShEMO Paper)   | Original ShEMO          | 58.02 |   -   |
+
+## 📁 Project Structure
+
+- `wav2vec2_SER.ipynb`: The notebook includes:
+  - Loading and preprocessing audio data
+  - Fine-tuning Wav2Vec2 on Modified ShEMO
+  - Model evaluation
+  - Visualization and error analysis
+
 ## 📊 Results
 
 The Modified ShEMO paper evaluates multiple models. Below are some of the reported results. 
@@ -38,30 +62,6 @@ Weighted Accuracy = 0.8401510657904797
 ```
 
 🔹 This result outperforms all previously reported methods in the paper, including the best-performing Early-Fusion model (WA = 81.60%).
-
-## 📁 Project Structure
-
-- `wav2vec2_SER.ipynb`: The notebook includes:
-  - Loading and preprocessing audio data
-  - Fine-tuning Wav2Vec2 on Modified ShEMO
-  - Model evaluation
-  - Visualization and error analysis
-
-## 📦 Dataset
-
-We used the **[Modified ShEMO](https://github.com/aliyzd95/modified_shemo)** dataset, an improved version of the original ShEMO dataset. Enhancements include:
-
-- Improved audio quality
-- Corrected labels
-- Preprocessing suitable for deep learning models
-
-Also, a comparison of SVM performance before and after dataset modification:
-
-| Machine Learning Model | Dataset           | WA%   | UA%   |
-|------------------------|--------------------|-------|-------|
-| SVM (After Modification) | Modified ShEMO     | 76.65 | 63.62 |
-| SVM (Before Modification)| Original ShEMO     | 72.95 | 58.66 |
-| SVM (ShEMO Paper)   | Original ShEMO          | 58.02 |   -   |
 
 ## 📈 Error Analysis
 
