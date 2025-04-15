@@ -8,17 +8,27 @@ We use the **`m3hrdadfi/wav2vec2-large-xlsr-persian-v3`** pretrained model for s
 
 📄 An academic [paper](https://arxiv.org/abs/2211.09956) introducing Modified ShEMO has been written, which also includes performance comparisons of various models trained on this dataset.
 
-## 📊 Results Comparison from the Paper
+## 📙 Description
 
-The Modified ShEMO paper evaluates multiple models. Below are some of the reported results:
+The model is trained and evaluated on the **Modified ShEMO** dataset, an improved version of the original ShEMO dataset for Persian emotional speech. The notebook demonstrates how a fine-tuned Wav2Vec2 model can outperform previous state-of-the-art models in emotion classification tasks for Persian speech.
+
+The trained model is available on Hugging Face:  
+👉 [aliyzd95/wav2vec2-xlsr-shemo-speech-emotion-recognition](https://huggingface.co/aliyzd95/wav2vec2-xlsr-shemo-speech-emotion-recognition)
+
+## 📊 Results
+
+The Modified ShEMO paper evaluates multiple models. Below are some of the reported results. 
+This project achieves a **WA (Weighted Accuracy)** of `0.8401`, which surpasses the results reported in the original research paper introducing the Modified ShEMO dataset.
 
 | Model                             | Features                                 | WA%   | UA%   |
 |----------------------------------|------------------------------------------|-------|-------|
-| SVM (Baseline [11])              | eGeMAPS                                   | 76.65 | 63.62 |
+| SVM (Baseline)              | eGeMAPS                                   | 76.65 | 63.62 |
 | CNN (1D) – Acoustic Model        | emo_large                                 | 79.68 | 66.12 |
 | CNN (2D) – Linguistic Model      | fastText (GT)                             | 58.01 | 51.37 |
 | Early-Fusion Model (DNN)         | emo_large + fastText (GT)                 | 81.60 | 74.68 |
 | Early-Fusion Model (DNN)         | emo_large + fastText (ASR transcriptions) | 80.51 | 69.73 |
+| **Wav2Vec2 (This project)**      | Raw Audio                                    | **84.01**  |   -   |
+
 
 Also, a comparison of SVM performance before and after dataset modification:
 
@@ -66,7 +76,7 @@ At the end of the notebook, samples of correct and incorrect predictions are vis
 
 ## 🤝 Contributions
 
-Feel free to contribute by submitting pull requests or opening issues. Collaboration is welcome!
+Feel free to cite or extend this project. For any questions or improvements, contributions are welcome!
 
 ---
 
